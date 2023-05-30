@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent {
-  array: unknown = [1,2,3,4];
+  array: any = [1,2,3,4];
 
 }

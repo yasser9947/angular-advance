@@ -1,2 +1,5 @@
 <h3 class="text-center"> all items </h3>
-<app-item *ngFor="let x in  array " > </app-item>
+<ng-container *ngFor="let x of  array;  first  as isFirst ">
+  <app-item [title]="isFirst?'first':'whatever'" > </app-item>
+</ng-container>
+
