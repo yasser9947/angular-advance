@@ -11,8 +11,8 @@ export class ItemComponent implements OnInit{
   title: string | undefined;
 
   ngOnInit(): void {
-      let s: any[] = [];
-      throw "error"
+
   }
+
 
 }

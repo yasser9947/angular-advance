@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ItemsComponent } from './items/items.component';
 import { ItemComponent } from './items/item/item.component';
 import {CustomErrorHandlerService} from "./core/errors/custom-error-handler.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {ItemService} from "./core/services/item.service";
 
 @NgModule({
   declarations: [
@@ -15,9 +17,10 @@ import {CustomErrorHandlerService} from "./core/errors/custom-error-handler.serv
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [
+  providers: [ItemService,
     {provide:ErrorHandler , useClass:CustomErrorHandlerService}
   ],
   bootstrap: [AppComponent]
