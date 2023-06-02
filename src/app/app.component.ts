@@ -30,7 +30,7 @@ export class AppComponent {
         type:ControlEnums.NUMBER,
         placeholder:"add"
       },
-      {label:"your age ",
+      {label:"your caca ",
         name:"112",
         type:ControlEnums.NUMBER,
         placeholder:"add"

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {BaseControl} from "./base-control";
 
 @Component({
@@ -13,8 +13,10 @@ import {BaseControl} from "./base-control";
         class="form-control"
         type="number"/>
       <p class="text-danger" *ngIf="control.touched&&control.errors">{{errorMsg?.required?errorMsg?.required:'this is required'}}</p>
+      {{cheRender()}}
     `,
-  inputs:  BaseControl.inputs
+  inputs:  BaseControl.inputs,
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class NumberControlComponent extends BaseControl{
 
